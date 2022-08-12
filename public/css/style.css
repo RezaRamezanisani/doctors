@@ -1,0 +1,734 @@
+@font-face {
+    font-family:"iranSans" ;
+    src: url("../iransans/5.5.1/IRANSansWeb_Light.ttf");
+}
+@font-face {
+    font-family: Orbitron;
+    src: url("../orbitron/static/Orbitron-Bold.ttf");
+}
+.time{
+    font-family: Orbitron !important;
+    color: white;
+    font-size: 1em;
+}
+*{
+    font-family: iranSans ,serif;
+}
+html,body{
+    font-family: iranSans serif;
+    height: 100%;
+    overflow-x: hidden;
+    background: #fcfbfc !important;
+}
+html.dark,body.dark{
+    background: #000 !important;
+    color: white !important;
+}
+html.dark,body.dark table{
+    color: white;
+    background: #000;
+}
+html.dark,body.dark .bg{
+    background: #000;
+}
+html.dark,body.dark .MB{
+    background: #000 !important;
+}
+html.dark,body.dark canvas{
+    color: white !important;
+}
+.bg{
+    background-image: url("../img/doctor.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 0;
+}
+
+
+
+.formLoginDoctor{
+    height: 100%;
+    width: 100%;
+
+}
+.formLoginDoctor .form-group{
+    position: relative;
+}
+.formLoginDoctor .form-group input{
+    border-radius: 25px 15px;
+
+}
+.formLoginDoctor .form-group label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    pointer-events: none;
+     font-weight: bolder;
+     color: #0c0c0c;
+     font-size:12px;
+    z-index: 1;
+}
+.btn-submit{
+    width: 50%;
+    margin: 0 auto;
+}
+.procress{
+    width: 40px;
+    height: 40px;
+    border:4px dashed #2880b3;
+    border-radius: 50%;
+    animation: precress .2s linear  infinite  ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.page_procress{
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(rgb(103, 174, 228),rgb(123, 181, 235));
+    z-index: 100000;
+}
+.icon-box{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    /*margin-right:1.5vw;*/
+    border-radius: 15px;
+    box-shadow:  0px 0px 15px #00000014;
+}
+
+#eu.act{
+    top:-40%;
+    transition:.5s;
+    font-size:13px;
+    color:#2E2787;
+    padding:12px;
+}
+/* nav_side */
+.nav_side{
+    font-family: iranSans, serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    list-style: none;
+    background: #2880b3;
+    border-radius: 0 15px 15px 0;
+    transition: .6s;
+}
+.nav_side li{
+    cursor: pointer;
+    height:  calc(100% / 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_side li a{
+    text-decoration: none;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_side li i{
+    color: white;
+}
+.nav_side li a{
+    width: 100%;
+
+}
+.nav_side li a:hover{
+    border-radius: 5px;
+    transition: .4s;
+    cursor: pointer;
+    transition: .4s;
+    color: rgb(255, 255, 255);
+    background: rgb(85, 164, 220);
+}
+.nav_side li span:hover{
+    border-radius: 5px;
+    transition: .4s;
+    cursor: pointer;
+    transition: .4s;
+    color: rgb(255, 255, 255);
+    background: rgb(85, 164, 220);
+}
+/* .nav_side li :hover{
+    cursor: pointer;
+    transition: .4s;
+    color: rgb(136, 223, 236);
+} */
+.nav_side .header .circles{
+    display: flex;
+    justify-content:space-around;
+
+}
+.nav_side .header .circles{
+    position: absolute;
+    top: 20px;
+    left: 1px;
+    padding: 0;
+    font-size: 10px;
+    transition: .6s ;
+    pointer-events: none;
+}
+.img_sidebar{
+    pointer-events: none;
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    right: 10%;
+    display: none;
+    animation: visible_text_sidebar .6s  .02s ;
+}
+.nav_side.wider .header .circles{
+    font-size: 20px;
+}
+.nav_side.wider .img_sidebar{
+   display: block;
+}
+.nav_side span{
+    display: none;
+    animation: visible_text_sidebar .6s  .02s;
+}
+.nav_side.wider{
+    transition: .6s;
+    width: 210px;
+}
+.nav_side.wider li a{
+    justify-content: end;
+}
+.nav_side.wider span{
+    display: block;
+    color: white;
+}
+/*    داریم باید به خود عنصر و کلاس که به آن اضافه میکنم مقدار دهی کنیمtransiton  در حالتی که  */
+/* nav_side */
+/* nav */
+.nav{
+    background: #2880b3;
+}
+.nav .div1{
+    display: flex;
+    justify-content: space-between;
+
+}
+form .search_input{
+    position: relative;
+}
+form .search_input .fas{
+    position: absolute;
+    pointer-events: none;
+    left:5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+input[type="text"]{
+     border: 1px solid gray;
+     outline: none;
+     font-size: 15px;
+     padding: 5px;
+
+}
+input[type="text"]::placeholder{
+    color: rgb(162, 157, 157);
+}
+
+.nav .div1 .icons{
+    display: flex;
+    align-items:baseline;
+}
+/* main */
+.main{
+    margin: 1% 6.5% 0% 7%;
+}
+
+.main .circle-icon{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.MB{
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 0px 15px #00000014;
+}
+.pro-bar{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.main .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main .bg{
+    background: rgb(206, 224, 243);
+    border-radius: 12px;
+}
+.main .precresses{
+    width: 100%;
+    text-align: center;
+
+}
+.main .procress-bar{
+    height: 5px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .probar{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+
+
+}
+table tbody tr:nth-child(even){
+    background: rgba(223, 233, 236, 0.5);
+    color: black;
+}
+table td .Tooltip{
+    background: rgb(72, 140, 230);
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 120%;
+    display: none;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    animation: tooltip .4s ease-in-out;
+}
+table td .Tooltip::before{
+    content: "⮚";
+    font-size:2em;
+    position: absolute;
+    width: 20px;height: 20px;
+    color:#c81951;
+    left: 100%;
+    top: 15%;
+    animation: run_arrow .5s  infinite;
+}
+table td .Tooltip p{
+    color: rgb(255, 255, 255);
+}
+table td.TooltipBlock{
+    position: relative;
+    cursor: pointer;
+}
+table td.TooltipBlock:hover .Tooltip{
+     display: block;
+}
+/* member */
+ .tableBlock table{
+    background: white;
+     color: #000000;
+     -webkit-border-radius: 12px;
+     -moz-border-radius: 12px;
+     border-radius: 12px;
+}
+
+.tableBlock{
+    margin-left: 50px;
+}
+.tableBlock table{
+    background: rgb(246, 246, 246);
+    width: 95%;
+    margin: 0 auto;
+    color: black;
+}
+.tableBlock table tr td span.barchasb{
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 13px;
+    font-size: 13px;
+    padding: 10px;
+}
+.tableBlock table .btn.del{
+     background: rgb(220, 76, 76);
+     color: white;
+     transition: .3s;
+}
+.tableBlock table .btn.del:hover{
+      background: white;
+      color: rgb(220, 76, 76);
+}
+.tableBlock table .btn.up{
+     background: rgb(224, 233, 238);
+     color: white;
+     transition: .3s;
+}
+.tableBlock table .btn.up{
+    background:white;
+    color: rgb(18, 113, 140);
+}
+.procress_table_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+.procress_table_block  .procress_table{
+    width: 40px;
+    height: 40px;
+    border: 6px solid rgb(94, 156, 198);
+    border-top: 6px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: precress .3s infinite;
+}
+.select_skillDoctor{
+
+    margin-top: 3px;
+    appearance: none;
+    -webkit-appearance: none;
+    -mos-appearance: none;
+     background: rgb(236, 249, 245);
+     width: 60%;
+     padding: 5px;
+     outline: none;
+     background: rgb(236, 249, 245);
+     border-radius: 12px;
+
+}
+.select_skillDoctor option{
+    background: rgb(230, 59, 133);
+    color: white;
+    border-radius: 12px;
+}
+/* modal add doctor */
+.modal-style .modal-body .form-group{
+    position: relative;
+    text-align: center;
+}
+.modal-style .modal-body .form-group span{
+    position: absolute;
+    width: 0px;
+    height: 5px;
+    background: rgb(211, 47, 99);
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .4s;
+
+}
+.modal-style .modal-body .form-group span.w100{
+   transition: .4s;
+   width: 72%;
+   border-radius: 12px;
+
+
+}
+.modal-style .modal-body .form-group span.label{
+   pointer-events: none;
+    position: absolute;
+    width: 63px;height: 28px;
+    background: rgb(208, 61, 108);
+    top:-30%;
+    right: 15%;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-style .modal-body .form-group span.label.visible{
+      opacity: 1;
+      visibility: visible;
+      border-radius: 12px;
+}
+.modal-style .modal-body .form-group .icon_input_add_doctor{
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.modal-style .modal-body .form-group .icon_input_add_doctor.vibre{
+    color: rgb(172, 46, 46);
+    animation: vibre .4s  infinite;
+    margin-top: -11px;
+}
+.modal-style .modal-body .form-group input{
+    margin: 5px;
+    background: rgb(226, 237, 243);
+    border-radius: 12px;
+    border: 2px dashed white;
+    width: 80%;
+
+}
+.modal-style .modal-body .form-group > input[type="submit"]{
+    background: rgb(248, 248, 248);
+    margin-top: 12px;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+
+}
+.modal-style .modal-body input[type="submit"]:hover{
+    background: rgb(208, 61, 108);
+    color: white;
+}
+/* /modal add doctor */
+.tableBlock table tr th.skill_th{
+    width: 30% ;
+ }
+ .err{
+     display: none;
+ }
+.box_success_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+    background: #8ac946;
+    color: #ffffff;
+    width: 300px;
+    height: 100px;
+    left: -50%;
+    bottom: 10%;
+    transition:.3s;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+     border-radius: 25px;
+    -webkit-box-shadow:  0px 0px 2px 2px #ffffff;
+    -moz-box-shadow:  0px 0px 2px 2px #ffffff;
+    box-shadow:  0px 0px 2px 2px #ffffff;
+}
+/* member */
+@keyframes tooltip {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes vibre {
+    0%{
+        transform: translate(0,0) rotate(0deg);
+    }
+    10%{
+        transform: translate(-1px,-1px) rotate(-1deg);
+    }
+    20%{
+        transform: translate(1px,1px) rotate(1deg);
+    }
+    30%{
+        transform: translate(0,0) rotate(0deg);
+    }
+    40%{
+        transform: translate(-1px,-1px) rotate(-1deg);
+    }
+    50%{
+        transform: translate(0,0) rotate(1deg);
+    }
+    60%{
+        transform: translate(1px,0) rotate(0deg);
+    }
+    70%{
+        transform: translate(1px,-1px) rotate(-1deg);
+    }
+    80%{
+        transform: translate(-1px,1px) rotate(1deg);
+    }
+    90%{
+        transform: translate(1px,-1px) rotate(0deg);
+    }
+    100%{
+        transform: translate(1px,1px) rotate(1deg);
+    }
+
+}
+@keyframes run_arrow {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(12px);
+    }
+}
+
+
+
+/* main */
+@keyframes precress {
+    0%{
+          transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(100deg);
+    }
+    100%{
+       transform: rotate(360deg);
+    }
+}
+@keyframes  visible_text_sidebar {
+    0%{
+          opacity: 0;
+          visibility: hidden;
+          color: rgb(123, 123, 123);
+    }
+
+    100%{
+       opacity: 1;
+       visibility: visible;
+       color: white;
+    }
+}
+@media screen and (max-width:992px){
+  /*.row2 .table{*/
+  /*    max-width: 50% !important;*/
+  /*}  */
+    .modal-style .modal-body .form-group{
+     margin-top: 25px !important;
+ }
+}
+@media screen and (max-width:962px){
+
+    .formLoginDoctor{
+        width: 90% !important;
+        margin: 0 auto;
+
+    }
+    .bg{
+        display: none;
+    }
+    .blockForm{
+        height: 100%;
+        width: 100% !important;
+
+     }
+     .blockForm div{
+        position: absolute;
+        left: 50% !important;
+        transform: translate(-50%,-50%) !important;
+        top: 50% !important;
+
+     }
+     .blockForm form{
+         padding-top: 0 !important;
+     }
+     .btn-submit{
+         width: 100%;
+     }
+     .main{
+        margin: 3% 5% 0% 10% ;
+     }
+     /* #addDoctor .row .form-group.col-lg-6{
+         margin-bottom: 100px 0 !important ;
+     } */
+
+
+}
+@media screen and (max-width:767px){
+    .nav .div2{
+        text-align: center !important;
+        margin: 10px 0 !important;
+
+    }
+    .nav .div1 {
+        justify-content: center;
+    }
+    .nav .div1 form{
+        text-align: start;
+    }
+    .nav .div1 .icons{
+        margin: 0 !important;
+       text-align: center;
+       justify-content: center;
+      }
+      .nav .div1 .search{
+          width: 100% !important;
+
+      }
+      .nav .div1 .search_input{
+          width: 50%;
+          margin: 0 auto;
+      }
+      .nav .div1{
+          flex-direction: column-reverse;
+      }
+      .nav .div1 form{
+          text-align: center;
+          padding-bottom: 12px;
+      }
+      /*.main .MB{*/
+      /*      margin-bottom: 8px;*/
+      /*}*/
+      .main{
+        margin: 3% 6% 0% 15% ;
+    }
+
+    .main .Tooltip{
+        font-size: 10px;
+        padding: 5px;
+    }
+   .main .Tooltip::before{
+       content: "";
+   }
+   .tableBlock table tr td span.barchasb{
+    font-size: 10px;
+    padding: 9px;
+   }
+   /*.MB{*/
+   /*    margin-right: 1.5%;*/
+   /*}*/
+   .icon-box:not(first-child){
+       margin-top: 5% !important;
+   }
+
+}
+@media screen  and (max-width:525px){
+    .main{
+        margin: 3% 0% 0% 20%;
+    }
+    .tableBlock table tr td span.barchasb{
+        font-size: 9px;
+        padding: 5px;
+       }
+    .tableBlock table tr th.skill_th{
+       width: 40% !important;
+    }
+
+
+}
+@media screen  and (max-width:400px){
+    .main{
+        margin: 3% 5% 0% 20%;
+    }
+
+
+}
+
+
+
